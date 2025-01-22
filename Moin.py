@@ -6,10 +6,9 @@ import threading
 import json
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 
-bot = telebot.TeleBot('7542386978:AAEfkK12qlBcq7nLjI1YMbSAS80FUtw')
-
+bot = telebot.TeleBot('7718269470:AAEsMd95OKpasXP04YJ9CgswjKOPnxvQnDA')
 # Admin user IDs
-admin_id = ["7209762563"]
+admin_id = ["6501926425"]
 
 # File to store user data (coins, registration date, etc.)
 USER_DATA_FILE = "users_data.json"
@@ -103,7 +102,7 @@ def show_main_buttons(message):
     buy_coins_button = KeyboardButton("💰 Buy Coins")
     markup.add(attack_button, info_button, buy_coins_button)
     
-    bot.send_message(message.chat.id, "🔹 WELCOME TO PRAKHAR DDOS BOT 🔹", reply_markup=markup)
+    bot.send_message(message.chat.id, "🔹 WELCOME TO ROWDY DDOS BOT 🔹", reply_markup=markup)
 
 # Handler for /start command
 @bot.message_handler(commands=['start'])
@@ -172,7 +171,7 @@ def handle_buy_coins(message):
         bot.reply_to(message, "💰 𝗣𝗹𝗲𝗮𝘀𝗲 𝗽𝗿𝗼𝘃𝗶𝗱𝗲 𝘁𝗵𝗲 𝘂𝘀𝗲𝗿'𝘀 𝗜𝗗 𝗮𝗻𝗱 𝘁𝗵𝗲 𝗮𝗺𝗼𝘂𝗻𝘁 𝗼𝗳 𝗰𝗼𝗶𝗻𝘀.")
         bot.register_next_step_handler(message, process_buy_coins)
     else:
-        bot.reply_to(message, "💰 𝗗𝗠 𝗧𝗢 𝗕𝗨𝗬 𝗖𝗢𝗜𝗡𝗦 @SHADE_OWNER")
+        bot.reply_to(message, "💰 𝗗𝗠 𝗧𝗢 𝗕𝗨𝗬 𝗖𝗢𝗜𝗡𝗦 @Vivaan1122")
 
 def process_buy_coins(message):
     admin_id = str(message.chat.id)
