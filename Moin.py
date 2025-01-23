@@ -120,11 +120,6 @@ def handle_attack_button_press(message):
         user_data[user_id] = {"coins": 0, "registered_on": str(datetime.datetime.now())}
         save_user_data(user_data)
 
-    # Check if the cooldown period is active
-    if not is_cooldown_over():
-        remaining_cooldown = GLOBAL_COOLDOWN - (datetime.datetime.now() - last_attack_time).total_seconds()
-        bot.reply_to(message, f"⏳ 𝗧𝗵𝗲𝗿𝗲 𝗶𝘀 𝗮𝗻 𝗮𝘁𝘁𝗮𝗰𝗸 𝗶𝗻 𝗽𝗿𝗼𝗴𝗿𝗲𝘀𝘀. 𝘄𝗮𝗶𝘁 {int(remaining_cooldown)} 𝘀𝗲𝗰𝗼𝗻𝗱𝘀 ⏳")
-        return
 
     # Ask for target, port, and time
     bot.reply_to(message, "𝗘𝗻𝘁𝗲𝗿 𝘁𝗵𝗲 𝘁𝗮𝗿𝗴𝗲𝘁 𝗜𝗣, 𝗽𝗼𝗿𝘁, 𝗮𝗻𝗱 𝗱𝘂𝗿𝗮𝘁𝗶𝗼𝗻 𝗶𝗻 𝘀𝗲𝗰𝗼𝗻𝗱𝘀 𝘀𝗲𝗽𝗮𝗿𝗮𝘁𝗲𝗱 𝗯𝘆 𝘀𝗽𝗮𝗰𝗲𝘀")
@@ -145,8 +140,8 @@ def process_attack_input(message):
             bot.reply_to(message, "❗️ 𝗘𝗿𝗿𝗼𝗿: 𝗜𝗻𝘃𝗮𝗹𝗶𝗱 𝗽𝗼𝗿𝘁 𝗼𝗿 𝘁𝗶𝗺𝗲 𝗳𝗼𝗿𝗺𝗮𝘁❗️")
             return
         
-        if time > 180:
-            response = "❗️𝗘𝗿𝗿𝗼𝗿: 𝘂𝘀𝗲 𝗹𝗲𝘀𝘀 𝘁𝗵𝗮𝗻 180 𝘀𝗲𝗰𝗼𝗻𝗱𝘀❗️"
+        if time > 240:
+            response = "❗️𝗘𝗿𝗿𝗼𝗿: 𝘂𝘀𝗲 𝗹𝗲𝘀𝘀 𝘁𝗵𝗮𝗻 240 𝘀𝗲𝗰𝗼𝗻𝗱𝘀❗️"
             bot.reply_to(message, response)
             return
 
