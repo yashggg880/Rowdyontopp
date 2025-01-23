@@ -6,7 +6,7 @@ import threading
 import json
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 
-bot = telebot.TeleBot('7718269470:AAEsMd95OKpasXP04YJ9CgswjKOPnxvQnDA')
+bot = telebot.TeleBot('8151346712:AAE5I9wX7SPEt5MHVLe12FAiCaC8eJYe3T0')
 # Admin user IDs
 admin_id = ["6501926425"]
 
